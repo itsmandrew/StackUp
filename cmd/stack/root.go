@@ -1,18 +1,18 @@
 package stack
 
-
 import (
 	"fmt"
 	"os"
+
 	"github.com/spf13/cobra"
 )
 
 var rootCmd = &cobra.Command{
-	Use: "stack",
+	Use:   "stack",
 	Short: "stack - a simple CLI to view banking information given database",
 
 	Run: func(cmd *cobra.Command, args []string) {
-
+		_ = cmd.Help()
 	},
 }
 
