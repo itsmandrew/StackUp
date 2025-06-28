@@ -1,4 +1,4 @@
-module github.com/itsmandrew/StackUp
+module github.com/q-summitLabs/StackUp
 
 go 1.24.1
 
