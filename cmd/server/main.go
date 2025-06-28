@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/itsmandrew/StackUp/cmd/server/handlers"
-	client "github.com/itsmandrew/StackUp/internal/plaid"
+	"github.com/q-summitLabs/StackUp/cmd/server/handlers"
+	client "github.com/q-summitLabs/StackUp/internal/plaid"
 )
 
 func main() {
