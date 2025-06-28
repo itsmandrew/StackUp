@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/q-summitLabs/StackUp/cmd/server/handlers"
-	client "github.com/q-summitLabs/StackUp/internal/plaid"
+	plaidHandlers "github.com/q-summitLabs/StackUp/cmd/server/handlers/plaid"
 )
 
 func main() {
@@ -13,11 +13,9 @@ func main() {
 	router.GET("/health", handlers.HealthCheck)
 	router.GET("/hello", handlers.Hello)
 
-	// Plaid routes
-	router.GET("/plaid/env", func(c *gin.Context) {
-		env := client.PLAID_ENV
-		c.JSON(200, gin.H{"env": env})
-	})
+	// Plaid handler routes
+	router.GET("/plaid/env", plaidHandlers.GetEnv)
+	router.GET("/plaid/createLinkToken", plaidHandlers.CreateLinkToken)
 
 	router.Run(":8080")
 }
